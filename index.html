@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#main{
+
+    margin: auto;
+    border: 3px solid;
+    border-radius: 10px;
+    width: 300px;
+    height: 550px;
+    background-color: #9ade4741;
+    display: grid;
+    align-items: center;
+
+    
+
+}
+
+#second_main{
+    display: grid;
+    justify-content: center;
+}
+
+
+#one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#zero{
+    border: 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #E2EAF4;
+    cursor: pointer;
+    
+}
+#plus,#minus,#mul,#divi,#per,#back,#rightSide,#leftSide,#dot{
+    border: 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    cursor: pointer;
+    
+}
+#eq{
+    border: 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    cursor: pointer;
+
+}
+#clean{
+    border: 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:crimson;
+    cursor: pointer;
+
+}
+
+
+
+#inp{
+    border: 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    width: 180px;
+    margin-left: 37px;
+}
+
+body{
+    background-color: #15bad439;
+}
+
+/* th:nth-child(even){
+    background-color: aliceblue;
+}
+
+
+tr:nth-child(odd){
+}
+
+tr:nth-child(even){
+    background-color: beige;
+} */
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <br><br>
+
+        <h1 style="display: grid;justify-content: center;"><u><i>Calculator</i></u></h1>
+
+        <br>
+    <div id="main">
+
+
+        
+        
+        <table id="second_main">
+
+            <input type="text" name="" id="inp" placeholder="0">
+
+            <tr> <th id="one">1</th> <th id="two">2</th> <th id="three">3</th> <th id="back"><</th> </tr>
+            <tr> <th id="four">4</th> <th id="five">5</th> <th id="six">6</th> <th id="plus">+</th> </tr>
+            <tr> <th id="seven">7</th> <th id="eight">8</th> <th id="nine">9</th> <th id="minus">-</th> </tr>
+
+            <tr> <th id="zero">0</th> <th id="per">%</th> <th id="divi">/</th> <th id="mul">x</th>  </tr>
+            <tr><th id="leftSide">(</th>  <th id="rightSide">)</th> <th id="eq" colspan="2">=</th>    </tr>
+
+            <tr > <th id="dot">.</th> <th id="clean" colspan="4"><b>C</b></th></tr>
+            <!-- <tr><th>2</th></tr> -->
+
+
+        </table>
+
+    </div>
+
+
+
+    <script>
+
+
+        let s=""
+
+        let se=""
+
+        let one=document.getElementById("one")
+
+        one.addEventListener("click",()=>{
+
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=1)
+
+            s+=1   
+        })
+
+        let two=document.getElementById("two")
+
+        two.addEventListener("click",()=>{
+
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=2)
+
+            s+=2
+        })
+
+        let three=document.getElementById("three")
+
+        three.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=3)
+
+            s+=3
+        })
+
+        let four=document.getElementById("four")
+
+        four.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=4)
+
+            s+=4
+        })
+
+        let five=document.getElementById("five")
+
+        five.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=5)
+
+            s+=5
+        })
+
+        let six=document.getElementById("six")
+
+        six.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=6)
+
+            s+=6
+        })
+
+        let seven=document.getElementById("seven")
+
+        seven.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=7)
+
+            s+=7
+        })
+
+        let eight=document.getElementById("eight")
+
+        eight.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=8)
+
+            s+=8
+        })
+
+        let nine=document.getElementById("nine")
+
+        nine.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=9)
+
+            s+=9
+        })
+
+        let zero=document.getElementById("zero")
+
+        zero.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=0)
+
+            s+=0
+        })
+
+        let dot=document.getElementById("dot")
+
+        dot.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=".")
+
+            s+="."
+        
+        })
+
+
+
+
+        //Operations
+
+
+
+
+        let plus=document.getElementById("plus")
+
+        plus.addEventListener("click",()=>{
+
+            let input_box=document.getElementById("inp")
+            input_box.value=(se+="+")
+            s=s+"+"
+        })
+
+        let minus=document.getElementById("minus")
+
+        minus.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+="-")
+            s+="-"
+        })
+
+        let multiplication=document.getElementById("mul")
+
+        multiplication.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+="x")
+            s+="*"
+        })
+
+        let division=document.getElementById("divi")
+
+        division.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+="/")
+            s+="/"
+        })
+
+        let percentage=document.getElementById("per")
+
+        percentage.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+="%")
+            s+="%"
+        })
+
+
+        let leftSide=document.getElementById("leftSide")
+
+        leftSide.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+="(")
+            s+="("
+        })
+
+        let rightSide=document.getElementById("rightSide")
+
+        rightSide.addEventListener("click",()=>{
+            let input_box=document.getElementById("inp")
+            input_box.value= (se+=")" )
+            s+=")"
+        })
+
+
+
+        //Validations
+
+
+
+
+
+        let equal=document.getElementById("eq")
+
+        equal.addEventListener("click",()=>{
+
+            let input_box=document.getElementById("inp")
+
+            input_box.value=eval(s)
+
+            
+
+            if(s==""&&se==""){
+                input_box.value=0
+            }
+
+
+            s=""
+            se=""
+            
+        })
+        
+        let clean=document.getElementById("clean")
+
+        let input_box=document.getElementById("inp")
+
+        clean.addEventListener("click",()=>{
+            input_box.value=""
+            s=""
+            se=""
+        })
+
+
+        let backSpace=document.getElementById("back")
+
+        backSpace.addEventListener("click",()=>{
+            input_box.value=input_box.value.slice(0,-1)
+            se=se.slice(0,-1)
+            s=s.slice(0,-1)
+            // se=""
+           
+        })
+        
+
+    </script>
+
+
+
+</body>
+</html>
